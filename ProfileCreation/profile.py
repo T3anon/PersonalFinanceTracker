@@ -1,7 +1,8 @@
 #Create a user profile 
 
-username = input("Enter a username:")
-email = input("Enter your email:")
-password = input("Enter a password:")
-first_name = input("Enter your first name:")
-last_name = input("Enter your last name:")
+def create_user_profile(username,email,password,first_name,last_name):
+    username = input("Enter a username:")
+    email = input("Enter your email:")
+    password = input("Enter a password:")
+    first_name = input("Enter your first name:")
+    last_name = input("Enter your last name:")
