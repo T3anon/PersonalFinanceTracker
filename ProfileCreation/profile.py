@@ -8,8 +8,8 @@ def create_user_profile(username,email,password,first_name,last_name):
     last_name = input("Enter your last name:")
 
 #create user dictionary
-user_dict = {
-    "username" : "input", "email" : "input", 
-    "password" : "input", "first_name" : "input", 
-    "last_name" : "input"
+        user_dict = {
+            "username" : "username", "email" : "email", 
+            "password" : "password", "first_name" : "first_name", 
+            "last_name" : "last_name"
 }
