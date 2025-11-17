@@ -4,7 +4,7 @@ Like many people, we have trouble keeping track of what we spend my money on. Wh
 <br>
 Members: Anthony Swearingen, Erin Whiting, Grace Umstot<br>
 <br>
-Pick 1(Anthony vote: Webpage)<br>
+Pick 1(Anthony vote: Webpage) (Erin vote: Webpage) <br>
 Webpage: Javascript, HTML, Tailwind(Endline css) OR python(with flask do not want to do)<br>
 iPhone App: Swift(Xcode)<br>
 Android App: Kotlin<br>
