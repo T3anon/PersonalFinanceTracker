@@ -17,3 +17,6 @@ groceries [[1, 2], [10-11-23, 10-12-23], ["walmart", "target"], ["food", "food"]
 car [[1, 2], [10-11-23, 10-12-23], ["auto zone", "auto repair shop"], ["tires", "gaskets"]]<br>
 <br>
 groceries[1,1,1,1]<br>
+TODO:<br>
+Grace and Erin start front end development<br>
+Anthony starts backend development<br>
