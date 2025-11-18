@@ -1,0 +1,10 @@
+I will explain in our next meeting on thursday or i will message you your stuff is under "profile"
+
+To be able to do this and see what it is under do this in terminal:
+
+npm i
+npm run dev
+
+After this you will be able to access the website off of a localhost and see it. The main page is the page.tsx and then everything in the folders would be at the search bar /"folder name" yours for example would be http://localhost:3000/profile after you run npm i and npm run dev.
+
+This allows for better understanding of what you are doing after you save the file refresh the localhost page and it will show you what changed.
