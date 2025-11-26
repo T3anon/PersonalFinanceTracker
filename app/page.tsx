@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Nav from "@/components/nav";
 
 export default function Home() {
   return (
     <body>
-        <nav className="nav">
+        <Nav items={[{href:"/",label:"Home"},{href:"/profile",label:"Profile"}]} />
+        
             <div className="nav-logo">
                 <p>LOGO .</p>
             </div>
@@ -22,7 +24,6 @@ export default function Home() {
             <div className="menu-btn">
                 
             </div>
-        </nav>
     </body>
   );
 }
