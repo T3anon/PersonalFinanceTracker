@@ -4,7 +4,7 @@ import Nav from "@/components/nav";
 export default function Home() {
   return (
     <body>
-        <Nav items={[{href:"/",label:"Home"},{href:"/profile",label:"Profile"}]} />
+        <Nav items={[{href:"/",label:"Home"},{href:"/profile",label:"Profile"},{href:"/login",label:"Login"}]} />
         
             <div className="nav-logo">
                 <p>LOGO .</p>
