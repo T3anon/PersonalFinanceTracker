@@ -4,7 +4,7 @@ import Nav from "@/components/nav";
 export default function Home() {
   return (
         <body>
-            <Nav items={[{href:"/",label:"Home"},{href:"/profile",label:"Profile"},{href:"/login",label:"Login"}]} />
+            <Nav items={[{href:"/",label:"Home"},{href:"/budget",label:"Budget"},{href:"/profile",label:"Profile"},{href:"/login",label:"Login"}]} />
             <h1 className="font-weight: bold;">User Profile</h1>
 
             <div className="border: 2px solid black; padding: 16px; width: 300px;">
