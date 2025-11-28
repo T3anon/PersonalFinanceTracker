@@ -1,28 +1,22 @@
 import Image from "next/image";
+import Nav from "@/components/nav";
+import { getServerSession } from "next-auth";
+import { authOptions } from "./api/auth/[...nextauth]/route";
+import { User } from "./user";
 
-export default function Home() {
+export default async function Home() {
+  const session = await getServerSession(authOptions)
+
   return (
-    <body>
-        <nav className="nav">
-            <div className="nav-logo">
-                <p>LOGO .</p>
-            </div>
-            <div className="nav-menu">
-                <ul>
-                    <li><a href="#" className="link">Home</a></li>
-                    <li><a href="#" className="link">Blog</a></li>
-                    <li><a href="#" className="link">Services</a></li>
-                    <li><a href="#" className="link">About</a></li>
-                </ul>
-            </div>
-            <div className="nav-button">
-                <button className="btn" id="loginBtn">Sign In</button>
-                <button className="btn" id="registerBtn">Sign Up</button>
-            </div>
-            <div className="menu-btn">
-                
-            </div>
-        </nav>
-    </body>
+    <div>
+      <Nav items={[{href:"/",label:"Home"},{href:"/budget",label:"Budget"},{href:"/profile",label:"Profile"},{href:"/login",label:"Login"}]} />
+      <main>
+        <h2>Server Session</h2>
+        <pre>{JSON.stringify(session)}</pre>
+        <h2>Client Call</h2>
+        <User />
+      </main>
+    </div> 
+             
   );
 }
