@@ -1,18 +1,17 @@
-// schema.prisma
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
   provider = "prisma-client-js"
 }
 
-model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  password String
-  name  String?
+datasource db {
+  provider = "postgresql"
 }
 
-DATABASE_URL="postgresql://user:password@host:port/database"
+model User {
+  id       Int     @id @default(autoincrement())
+  email    String  @unique
+  password String
+  name     String?
+}
