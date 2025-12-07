@@ -3,6 +3,7 @@ import Nav from "@/components/nav";
 import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]/route";
 import { User } from "./user";
+import { LoginButton, LogoutButton } from "./auth";
 
 export default async function Home() {
   const session = await getServerSession(authOptions)
@@ -11,6 +12,8 @@ export default async function Home() {
     <div>
       <Nav items={[{href:"/",label:"Home"},{href:"/budget",label:"Budget"},{href:"/profile",label:"Profile"},{href:"/api/auth/signin",label:"Login"}]} />
       <main>
+        <LoginButton />
+        <LogoutButton />
         <h2>Server Session</h2>
         <pre>{JSON.stringify(session)}</pre>
         <h2>Client Call</h2>
