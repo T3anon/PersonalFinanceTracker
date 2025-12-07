@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma'
+import { User } from '@prisma/client'
 import { compare } from 'bcrypt'
 import NextAuth, { type NextAuthOptions } from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
@@ -45,11 +46,39 @@ export const authOptions: NextAuthOptions = {
                 return {
                     id: user.id + '',
                     email: user.email,
-                    name: user.name
+                    name: user.name,
+                    randomKey: 'Hello Pibble'
                 }
             }
         })
-    ]
+    ],
+    callbacks: {
+        session: ({session, token}) => {
+            console.log('Session Callback')
+            return {
+                ...session,
+                user: {
+                    ...session.user,
+                    id: token.id,
+                    randomKey: token.randomKey
+                }
+            }
+            return session
+        },
+        jwt: ({ token, user}) => {
+            console.log('JWT Callback', {token, user})
+            if (user) {
+                const u = user as unknown as any
+                return {
+                    ...token,
+                    id: u.id,
+                    randomKey: u.randomKey
+                }
+            }
+            return token
+
+        }
+    }
 }
 
 const handler = NextAuth(authOptions)
