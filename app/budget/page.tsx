@@ -30,7 +30,7 @@ export default function Home() {
           { href: "/", label: "Home" },
           { href: "/budget", label: "Budget" },
           { href: "/profile", label: "Profile" },
-          { href: "/login", label: "Login" },
+          { href: "/api/auth/signin", label: "Login" },
         ]}
       />
       <h1 className="text-2xl font-bold text-center my-6">Budget Overview</h1>

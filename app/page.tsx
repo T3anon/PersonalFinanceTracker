@@ -9,7 +9,7 @@ export default async function Home() {
 
   return (
     <div>
-      <Nav items={[{href:"/",label:"Home"},{href:"/budget",label:"Budget"},{href:"/profile",label:"Profile"},{href:"/login",label:"Login"}]} />
+      <Nav items={[{href:"/",label:"Home"},{href:"/budget",label:"Budget"},{href:"/profile",label:"Profile"},{href:"/api/auth/signin",label:"Login"}]} />
       <main>
         <h2>Server Session</h2>
         <pre>{JSON.stringify(session)}</pre>
