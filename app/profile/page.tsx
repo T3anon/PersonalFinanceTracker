@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Nav from "@/components/nav";
 
-export default function Home() {
+export default function Profile() {
   return (
         <body>
-            <Nav items={[{href:"/",label:"Home"},{href:"/budget",label:"Budget"},{href:"/profile",label:"Profile"},{href:"/api/auth/signin",label:"Login"}]} />
+            <Nav items={[{href:"/",label:"Welcome"},{href:"/userhomepage",label:"Home"},{href:"/budget",label:"Budget"},{href:"/profile",label:"Profile"},{href:"/api/auth/signin",label:"Login"}]} />
             <h1 className="font-weight: bold;">User Profile</h1>
 
             <div className="border: 2px solid black; padding: 16px; width: 300px;">

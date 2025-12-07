@@ -63,7 +63,6 @@ export const authOptions: NextAuthOptions = {
                     randomKey: token.randomKey
                 }
             }
-            return session
         },
         jwt: ({ token, user}) => {
             console.log('JWT Callback', {token, user})

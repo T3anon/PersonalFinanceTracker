@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Nav from "@/components/nav";
 
-export default function Home() {
+export default function Budget() {
   const budgetGroups = [
     {
       name: "Groceries",
@@ -27,7 +27,8 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 p-4">
       <Nav
         items={[
-          { href: "/", label: "Home" },
+          { href: "/", label: "Welcome" },
+          { href: "/userhomepage", label: "Home" },
           { href: "/budget", label: "Budget" },
           { href: "/profile", label: "Profile" },
           { href: "/api/auth/signin", label: "Login" },
