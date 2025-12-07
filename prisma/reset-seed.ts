@@ -10,11 +10,14 @@ const adapter = new PrismaPg(pool)
 const prisma = new PrismaClient({ adapter })
 
 async function main() {
+  // Delete existing user
+  await prisma.user.deleteMany({
+    where: { email: 'test@test.com' }
+  })
+  console.log('Deleted old user')
+
+  // Create new user with fresh bcrypt hash
   const password = await hash('test', 12)
-  
-  // Delete existing user first
-  await prisma.$executeRawUnsafe(`DELETE FROM public."User" WHERE email = 'test@test.com'`)
-  
   const user = await prisma.user.create({
     data: {
       email: 'test@test.com',
@@ -22,8 +25,9 @@ async function main() {
       password
     }
   })
-  console.log({ user })
+  console.log('Created new user:', user)
 }
+
 main()
   .then(() => prisma.$disconnect())
   .catch(async (e) => {
