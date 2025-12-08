@@ -12,3 +12,6 @@ After this you will be able to access the website off of a localhost and see it.
 This allows for better understanding of what you are doing after you save the file refresh the localhost page and it will show you what changed.
 
 docker run --rm -p 5432:5432 -e POSTGRES_HOST_AUTH_METHOD=trust postgres
+
+npx prisma migrate deploy
+npx prisma db seed
