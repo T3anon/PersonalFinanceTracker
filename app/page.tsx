@@ -10,7 +10,7 @@ export default async function Welcome() {
 
   return (
     <div>
-      <Nav items={[{href:"/",label:"Welcome"},{href:"/userhomepage",label:"Home"},{href:"/budget",label:"Budget"},{href:"/profile",label:"Profile"},{href:"/api/auth/signin",label:"Login"}]} />
+      <Nav items={[{href:"/",label:"Welcome"},{href:"/userhomepage",label:"Home"},{href:"/budget",label:"Budget"},{href:"/profile",label:"Profile"},{href:"/api/auth/signin",label:"Login"},{href:"/api/auth/signout",label:"Logout"}]} />
       <main>
         <LoginButton />
         <LogoutButton />

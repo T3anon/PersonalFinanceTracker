@@ -51,6 +51,7 @@ export default function Budget() {
           { href: "/budget", label: "Budget" },
           { href: "/profile", label: "Profile" },
           { href: "/api/auth/signin", label: "Login" },
+          {href:"/api/auth/signout",label:"Logout"}
         ]}
       />
       <h1 className="text-2xl font-bold text-center my-6">Budget Overview</h1>
