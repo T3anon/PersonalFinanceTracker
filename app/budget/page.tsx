@@ -21,6 +21,25 @@ export default function Budget() {
         { date: "11/12/2025", place: "Repair Shop", amount: 100, description: "Gaskets" },
       ],
     },
+    {
+      name: "Entertainment",
+      totalSpent: 90, 
+      budgetLimit: 200, 
+      transactions: [
+        {date: "11/13/2025", place: "Movie Theater",amount: 30, description:"Tickets"},
+        {date: "11/14/2025", place: "Spotify",amount: 10, description:"Subscription"},
+        {date: "11/15/2025", place: "Bowling Alley",amount: 50, description:"Games"},
+      ],
+    },
+    {
+      name: "Utilities",
+      totalSpent: 180, 
+      budgetLimit: 400, 
+      transactions: [
+        {date: "11/10/2025", place: "Electric Company",amount: 120, description:"Electric Bill"},
+        {date: "11/12/2025", place: "Water Company",amount: 60, description:"Water Bill"},
+      ],
+    },
   ];
 
   return (
