@@ -16,14 +16,25 @@ model User {
   name      String?
   username  String?
   categories Categories[]
+  budgets   CategoryBudget[]
 }
 
 model Categories {
   id       Int      @id @default(autoincrement())
   category String
-  cost     Int
+  cost     Decimal
   place    String
   date     DateTime
   userId   Int
   user     User     @relation(fields: [userId], references: [id])
+}
+
+model CategoryBudget {
+  id        Int    @id @default(autoincrement())
+  userId    Int
+  category  String
+  budgetLimit Decimal @default(500)
+  user      User   @relation(fields: [userId], references: [id])
+  
+  @@unique([userId, category])
 }
