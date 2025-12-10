@@ -3,7 +3,7 @@ import Nav from "@/components/nav";
 
 export default function UserHomePage() {
   return (
-        <div>
+        <div className="min-h-screen p-4">
             <Nav items={[{href:"/",label:"Welcome"},{href:"/userhomepage",label:"Home"},{href:"/budget",label:"Budget"},{href:"/login",label:"Login"},{href:"/api/auth/signout",label:"Logout"}]} />
             
         </div>

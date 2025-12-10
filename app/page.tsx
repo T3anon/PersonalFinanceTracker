@@ -9,16 +9,9 @@ export default async function Welcome() {
   const session = await getServerSession(authOptions)
 
   return (
-    <div>
+    <div className="min-h-screen p-4">
       <Nav items={[{href:"/",label:"Welcome"},{href:"/userhomepage",label:"Home"},{href:"/budget",label:"Budget"},{href:"/login",label:"Login"},{href:"/api/auth/signout",label:"Logout"}]} />
-      <main>
-        <LoginButton />
-        <LogoutButton />
-        <h2>Server Session</h2>
-        <pre>{JSON.stringify(session)}</pre>
-        <h2>Client Call</h2>
-        <User />
-      </main>
+      
     </div> 
              
   );
