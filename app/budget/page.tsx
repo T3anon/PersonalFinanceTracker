@@ -50,7 +50,7 @@ export default function Budget() {
           { href: "/userhomepage", label: "Home" },
           { href: "/budget", label: "Budget" },
           { href: "/profile", label: "Profile" },
-          { href: "/api/auth/signin", label: "Login" },
+          { href: "/login", label: "Login" },
           {href:"/api/auth/signout",label:"Logout"}
         ]}
       />

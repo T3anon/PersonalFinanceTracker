@@ -4,7 +4,7 @@ import Nav from "@/components/nav";
 export default function Profile() {
   return (
         <body>
-            <Nav items={[{href:"/",label:"Welcome"},{href:"/userhomepage",label:"Home"},{href:"/budget",label:"Budget"},{href:"/profile",label:"Profile"},{href:"/api/auth/signin",label:"Login"},{href:"/api/auth/signout",label:"Logout"}]} />
+            <Nav items={[{href:"/",label:"Welcome"},{href:"/userhomepage",label:"Home"},{href:"/budget",label:"Budget"},{href:"/profile",label:"Profile"},{href:"/login",label:"Login"},{href:"/api/auth/signout",label:"Logout"}]} />
             <h1 className="font-weight: bold;">User Profile</h1>
 
             <div className="border: 2px solid black; padding: 16px; width: 300px;">
