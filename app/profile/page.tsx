@@ -3,7 +3,7 @@ import Nav from "@/components/nav";
 
 export default function Profile() {
   return (
-        <body>
+        <div>
             <Nav items={[{href:"/",label:"Welcome"},{href:"/userhomepage",label:"Home"},{href:"/budget",label:"Budget"},{href:"/profile",label:"Profile"},{href:"/login",label:"Login"},{href:"/api/auth/signout",label:"Logout"}]} />
             <h1 className="font-weight: bold;">User Profile</h1>
 
@@ -13,6 +13,6 @@ export default function Profile() {
                 <p><strong>Last Name:</strong> Whiting</p>
                 <p><strong>Email:</strong> erinwhiting06@gmail.com</p>
             </div>
-        </body>
+        </div>
     );
 }
