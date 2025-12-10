@@ -23,6 +23,15 @@ async function main() {
     }
   })
   console.log({ user })
+  const category = await prisma.category.create({
+    data: {
+      cost: 100,
+      place: 'Walmart',
+      date: new Date("2025-12-10T14:43:49.204Z"),
+      userId: user.id
+    }
+  })
+  console.log({ category })
 }
 main()
   .then(() => prisma.$disconnect())
