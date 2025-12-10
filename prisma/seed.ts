@@ -12,7 +12,8 @@ const prisma = new PrismaClient({ adapter })
 async function main() {
   const password = await hash('test', 12)
   
-  // Delete existing user first
+  // Delete existing categories and user first
+  await prisma.$executeRawUnsafe(`DELETE FROM public."Categories" WHERE "userId" IN (SELECT id FROM public."User" WHERE email = 'test@test.com')`)
   await prisma.$executeRawUnsafe(`DELETE FROM public."User" WHERE email = 'test@test.com'`)
   
   const user = await prisma.user.create({
@@ -23,15 +24,16 @@ async function main() {
     }
   })
   console.log({ user })
-  const category = await prisma.category.create({
+  const categories = await prisma.categories.create({
     data: {
+      category: "Groceries",
       cost: 100,
       place: 'Walmart',
       date: new Date("2025-12-10T14:43:49.204Z"),
       userId: user.id
     }
   })
-  console.log({ category })
+  console.log({ categories })
 }
 main()
   .then(() => prisma.$disconnect())

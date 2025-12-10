@@ -15,11 +15,12 @@ model User {
   password  String
   name      String?
   username  String?
-  categories Category[]
+  categories Categories[]
 }
 
-model Category {
+model Categories {
   id       Int      @id @default(autoincrement())
+  category String
   cost     Int
   place    String
   date     DateTime
