@@ -19,19 +19,15 @@ export const Form = () => {
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
-      const res = await signIn('credentials', {
-        redirect: false,
+      await signIn('credentials', {
+        redirect: true,
         email,
         password,
-        callbackUrl
+        callbackUrl: callbackUrl || '/userhomepage'
       })
-      console.log('Res', res)
-      if (!res?.error) {
-        router.push(callbackUrl)
-      } else {
-        setError('Invalid email or password')
-      }
-    } catch (err: any) {}
+    } catch (err: any) {
+      setError('Invalid email or password')
+    }
   }
 
   return (
