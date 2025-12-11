@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Suspense } from 'react'
 import { Form as LoginForm } from './form'
 
+// Login page with email/password form
 export default function LoginPage() {
   return (
     <div className="h-screen w-screen flex justify-center items-center bg-slate-100">

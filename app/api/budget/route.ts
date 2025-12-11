@@ -3,9 +3,11 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 
+// Updates or creates a budget limit for a category
 export async function PUT(req: NextRequest) {
   const session = await getServerSession(authOptions);
 
+  // Ensure user is authenticated
   if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }

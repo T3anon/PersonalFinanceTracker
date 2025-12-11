@@ -3,9 +3,11 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 
+// Creates a new transaction/expense entry
 export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
 
+  // Ensure user is authenticated
   if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }

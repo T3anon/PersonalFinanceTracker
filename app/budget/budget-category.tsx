@@ -26,6 +26,7 @@ export default function BudgetCategory({ group }: BudgetCategoryProps) {
     100
   );
 
+  // Save new budget limit to database
   async function handleSave() {
     setLoading(true);
     try {
